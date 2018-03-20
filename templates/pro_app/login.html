@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% extends "pro_app/base.html" %}
+  {% block body_block %}
+        <h1> This is Login page<h1>
+          <form action="{% url 'login' %}" method="post">
+            {% csrf_token%}
+            <label for="username">User Name:</label>
+            <input type="text" name="username" placeholder="Enter user name">
+
+            <label for="password">Password:</label>
+            <input type="password" name="password">
+
+            <input type="submit" name="submit" value="Login">
+
+          </form>
+  {% endblock %}

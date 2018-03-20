@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% extends "pro_app/base.html" %}
+  {% block body_block %}
+        <h1> please sign up here !<h1>
+        <form method='post'>
+          {{form.as_p}}
+          {% csrf_token%}
+          <input type='submit' class='btn btn-primary' value='submit'>
+        </form>
+  {% endblock %}
